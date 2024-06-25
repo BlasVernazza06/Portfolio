@@ -139,39 +139,117 @@ main{
 
 .About-me{
     display: flex;
-    justify-content: center;
-    align-items: center;
     border: 1px solid gray;
     border-radius: 10px;
     margin: 20px;
     padding: 20px;
     height: 230px;
-    background-color: aqua;
-}
-
-.info-About{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
 }
 
 .info-About .title-section{
-    background-color: brown;
+}
+
+.info-About .title-section p{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.info-About .title-section span{
+    font-size: 50px;
+    color: rgba(25, 133, 40, 0.959);
 }
 
 .info-About .text-section{
-    flex: 2;
-    padding: 20px;
     color: #fff;
+    width: 1fr;
 }
 
 .About-me .image-about-me{
-    flex: 1;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    align-items: right;
+    justify-content: right;
 }
 
 /* Termina Start-Section */
+
+.separator{
+    height: 300px;
+}
+
+/* Comienza Tech-Section */
+
+/* Comienza FrontSkills */
+
+.Tech-section{
+    max-width: 800px;
+    min-width: 600px;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.Tech-section .title{
+    padding-bottom: 20px;
+}
+
+.Front-section{
+    padding-bottom: 50px;
+}
+
+.Tech-section .Front-section .title-front{
+    padding-bottom: 10px;
+}
+
+.Tech-section .Front-section .frontend-skills{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.skills-elem{
+    padding: 10px;
+        
+    border: 1px solid gray;
+}
+
+/* Termina FrontSkills */
+
+/* Comienza BackSkills */
+
+.Back-section{
+    padding-bottom: 50px;
+}
+
+.Back-section .title-back{
+    padding-bottom: 10px;
+}
+
+.Tech-section .Back-section .backend-skills{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Termina BackSkills */
+
+/* Comienza OtrasSkills*/
+
+.Tech-section .Otras-section .title-otras{
+    padding-bottom: 10px;
+}
+
+.Tech-section .Otras-section .otras-skills{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* Termina OtrasSkills*/
+
+/* Termina Tech-Section */
