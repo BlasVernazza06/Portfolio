@@ -99,7 +99,7 @@
 /* Comienza Start-Section */
 
 main{
-    background-color:rgb(238, 234, 234);
+    /* background-color: #000300; */
 }
 
 .Start{
@@ -107,7 +107,6 @@ main{
     gap: 310px;
     justify-content: center;
     align-items: center;
-    background-color:rgb(238, 234, 234);
     padding: 20px;   
 }
 
@@ -139,19 +138,21 @@ main{
 
 .About-me{
     display: flex;
-    border: 1px solid gray;
     border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px rgb(187, 182, 182);
     margin: 20px;
     padding: 20px;
-    height: 230px;
+    height: 100%;
 }
 
 .info-About .title-section{
+    text-align: left;
+    
 }
 
 .info-About .title-section p{
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .info-About .title-section span{
@@ -159,8 +160,17 @@ main{
     color: rgba(25, 133, 40, 0.959);
 }
 
+.separator-about-line{
+    background-color: rgb(100, 226, 75);
+    border: none;
+    height: 5px;
+    width: 650px;
+}
+
 .info-About .text-section{
-    color: #fff;
+    padding-top: 20px;
+    height: 100%;
+    color: black;
     width: 1fr;
 }
 
@@ -186,20 +196,29 @@ main{
     display: flex;
     justify-content: center;
     margin: 10px auto;
-    padding: 20px;
+    padding: 10px;
     flex-direction: column;
 }
 
 .Tech-section .title{
-    padding-bottom: 20px;
+    padding-bottom: 50px;
+}
+
+.Tech-section .title p{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
 }
 
 .Front-section{
     padding-bottom: 50px;
 }
 
-.Tech-section .Front-section .title-front{
-    padding-bottom: 10px;
+.Tech-section .title-section{
+    padding-bottom: 15px;
+    color: rgb(100, 226, 75);
+    font-size: 20px;
+    text-decoration: dotted;
 }
 
 .Tech-section .Front-section .frontend-skills{
@@ -211,8 +230,14 @@ main{
 
 .skills-elem{
     padding: 10px;
-        
-    border: 1px solid gray;
+    background-color: white;   
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 2px rgb(224, 224, 224);
+}
+
+.skills-elem:hover{
+    transform: scale(1.05);
+    transition: .2s all;
 }
 
 /* Termina FrontSkills */
@@ -221,10 +246,6 @@ main{
 
 .Back-section{
     padding-bottom: 50px;
-}
-
-.Back-section .title-back{
-    padding-bottom: 10px;
 }
 
 .Tech-section .Back-section .backend-skills{
@@ -237,10 +258,6 @@ main{
 /* Termina BackSkills */
 
 /* Comienza OtrasSkills*/
-
-.Tech-section .Otras-section .title-otras{
-    padding-bottom: 10px;
-}
 
 .Tech-section .Otras-section .otras-skills{
     display: flex;
