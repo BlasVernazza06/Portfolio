@@ -9,69 +9,83 @@
 
 /* Comienza Nav-Section */
 
+body{
+    background-color: #383838;
+}
+
 .nav-bar{
     width: 100%;
-    height: 55px;
-    font-size: 20px;
     display: flex;
+    justify-content: center;
+    background-color: #383838;
+    
+}
+
+.navbar-items{
+    display: flex;
+    gap: 800px;
     align-items: center;
-    justify-content: right;
-    text-align: center;
-    background-color:gray;
-    overflow: hidden; 
-    box-shadow: 0.5px 0.7px 0.7px 0.7px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1500px; /* Ajusta este valor según lo necesites */
+    padding: 25px;
+}
+
+@media (max-width: 1536px) {
+    .navbar-items{
+        gap: 600px;
+        
+    }
+}
+@media (max-width: 1280px) {
+    .navbar-items{
+        gap: 500px;
+        
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbar-items{
+        gap: 340px;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-items{
+        gap: 100px;
+        
+    }
 }
 
 .logo-nav{
-    margin-left: 0px;
-    width: 160px;
     color: white;
-    
-
 }
 
 .logo-nav p{
     font-weight: 600;
     font-size: larger;
-    
 }
 
-
-.nav-bar .nav-list{
-    width: 70%;
-    text-align: right;
-
+.nav-list{
+    display: flex;
+    gap: 25px;
+    text-decoration: none;
+    list-style: none;
 }
 
-
-
-.nav-bar ul li{
-    display: inline-block;
-    padding-right: 25px;
-
-} 
-
-.nav-bar ul li a {
+.nav-item a {
     text-decoration: none;
     color: white;
-}
-
-
-.nav-bar ul li a,
-.nav-bar ul li a:after,
-.nav-bar ul li a:before {
-  transition: all .5s;
-}
-
-.nav-bar ul li a:hover {
-    color: rgba(25, 133, 40, 0.959);
-}
-
-.nav-bar ul li a{
     position: relative;
+    transition: all .5s;
 }
 
-.nav-bar ul li a:after{
+.nav-item a:hover {
+    color: rgb(100, 226, 75);
+}
+
+.nav-item a:after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -80,18 +94,14 @@
     width: 0%;
     content: '.';
     color: transparent;
-    background: rgba(25, 133, 40, 0.959);
+    background: rgb(100, 226, 75);
     height: 1px;
     margin-bottom: -7px;
-    
+    transition: all .5s;
 }
 
-.nav-bar ul li a:hover::after{
+.nav-item a:hover::after {
     width: 100%;
-}
-
-.nav-bar img{
-    padding-right: 30px;
 }
 
 /* Termina Nav-Section */
@@ -106,16 +116,29 @@
     margin: 50px;   
 }
 
+@media (max-width: 1024px) {
+    .Start{
+        gap: 160px;
+    }
+}
 
+.info-start .name{
+    color: aliceblue;
+}
 
 .info-start .info{
-    padding-bottom: 20px;
+    color: aliceblue;
+}
+
+.info-start .flags{
+    padding-bottom: 10px;
 }
 
 .info-start .buttons button{
     height: 35px;
     margin-right: 8px;
     padding: 10px;
+    background-color: #383838;
     border: 1px solid rgb(100, 226, 75);
     border-radius: 10px;
     color: rgb(100, 226, 75);
@@ -123,66 +146,65 @@
 }
 
 .info-start .buttons button:hover{
-    box-shadow: 1px 1px 0px 0px rgba(182, 182, 182, 0.993);
+    cursor: pointer;
+    transform: scale(1.07);
+    transition: .2s all;
 }
-
-
 
 /* Termina Start-Section */
 
-/* Comienza Start-Section */
-
-.About-Section{
+.About-Section {
     display: flex;
     padding: 50px;
     background-color: #202020;
 }
 
-.card-About{
+.card-About {
     display: flex;
+    flex-direction: row; /* Por defecto, la imagen y el texto están uno al lado del otro */
+    width: 100%;
+    max-width: 1300px;
+    min-width: 1100px;
     background-color: #383838;
     box-shadow: 1px 1px 1px 5px #242323;
-    margin: 0px auto;
+    margin: 0 auto;
     padding: 30px;
-
 }
 
-.info-About .title-section{
+.info-About .title-section {
     text-align: left;
-    
 }
 
-.info-About .title-section p{
+.info-About .title-section p {
     font-size: 30px;
     font-weight: 700;
     color: #fff;
 }
 
-.info-About .title-section span{
+.info-About .title-section span {
     font-size: 60px;
     color: rgb(100, 226, 75);
 }
 
-.separator-about-line{
+.separator-about-line {
     background-color: rgb(100, 226, 75);
     border: none;
     height: 2px;
     width: 650px;
 }
 
-.info-About .text-section{
+.info-About .text-section {
     padding-top: 20px;
-    color:#fff;
+    color: #fff;
 }
 
-.info-About .buttons-about{
+.info-About .buttons-about {
     display: flex;
     gap: 10px;
     padding-top: 20px;
-
 }
 
-.info-About .buttons-about button{
+.info-About .buttons-about button {
     background-color: #383838;
     border: .1px solid rgb(100, 226, 75);
     border-radius: 20px;
@@ -190,22 +212,31 @@
     cursor: pointer;
 }
 
-.card-About .image-about-me{
+.card-About .image-about-me {
     display: flex;
     align-items: right;
     justify-content: right;
-    margin-left: 130px;
+    margin-left: 110px;
 }
 
-/* Termina Start-Section */
+@media (max-width: 1024px) {
+    .card-About {
+        flex-direction: column; /* Cambia la dirección del flex container en pantallas pequeñas */
+    }
+
+    .card-About .image-about-me {
+        margin-left: 0;
+        margin-bottom: 20px; /* Añade espacio entre la imagen y el texto */
+    }
+}
+
+/* Termina About-Section */
 
 .separator{
-    height: 300px;
+    height: 200px;
 }
 
 /* Comienza Tech-Section */
-
-/* Comienza FrontSkills */
 
 .Tech-section{
     max-width: 800px;
@@ -218,13 +249,24 @@
 }
 
 .Tech-section .title{
-    padding-bottom: 50px;
+    margin-bottom: 50px;
+    padding: 10px;
+    color: #fff;
 }
 
 .Tech-section .title p{
     text-align: center;
     font-size: 40px;
     font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.Tech-section .title .separator-tech-line{
+    width: 12%; /* Ajusta este valor según tus necesidades */
+    margin: 0 auto; /* Esto centra el hr */
+    border: none; /* Elimina cualquier borde por defecto */
+    border-top: 2px solid rgb(100, 226, 75); /* Añade un borde superior */
+   
 }
 
 .Front-section{
@@ -249,7 +291,7 @@
     padding: 10px;
     background-color: white;   
     border-radius: 10px;
-    box-shadow: 1px 1px 2px 2px rgb(224, 224, 224);
+
 }
 
 .skills-elem:hover{
@@ -282,7 +324,6 @@
     align-items: center;
     gap: 20px;
 }
-
 
 /* Termina OtrasSkills*/
 
